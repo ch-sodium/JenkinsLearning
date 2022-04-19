@@ -23,5 +23,10 @@ pipeline{
                 archive 'target/*.jar'
             }
         }
+        stage("Email Build Status") {
+            steps {
+                mail bcc: '', body: 'Pipeline completed successfully\n\n$(envJOB_NAME) - Build # $(env.BUILD_NUMBER) - $(currentBuild.currentResult)\n\nCheck console output at $(env.BUILD_URL) to view results', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline', to: 'shubham1995srivastava@gmail.com'
+            }
+        }
     }
 }
