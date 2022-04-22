@@ -51,11 +51,11 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.6</version>
-<!--                <configuration>-->
-<!--                    <systemPropertyVariables>-->
-<!--                        <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>-->
-<!--                    </systemPropertyVariables>-->
-<!--                </configuration>-->
+                <configuration>
+                    <systemPropertyVariables>
+                        <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+                    </systemPropertyVariables>
+                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
